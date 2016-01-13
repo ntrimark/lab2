@@ -4,21 +4,54 @@
 // Lab 2 programs
 //
 
-int illegalStatements() {
-    /* Start here! */
-    //int double = 0;
-    //double char = 2.5;
-    //char mychar = 'd'; mychar += 12;
-    //unsigned int a = -1;
-    //int pi = 3.14;
-    //short num = 1e9;
-    //string mystring = 5;
-    return 0;
+void odd_or_even(int num)
+{
+    if(num%2 == 0)
+        cout << num << " is even";
+    else
+        cout << num << " is odd";
+
 }
 
 int main() {
-    illegalStatements();
-    cout << "Start with Exercise 1 (legal/illegal statements)" << endl;
-    cout << "Then work on the exercises and code them up." << endl;
+    // odd_or_even(8);
+    string operation;
+    double rand1;
+    double rand2;
+    double result;
+    string decision;
+    cout << "Write an operator and two numbers: ";
+    cin >> operation >> rand1 >> rand2;
+    cout << "Would you like to perform the operation " << rand1 << operation << rand2;
+    cin >> decision;
+    if (operation == "+") {
+        if (decision == "yes") {
+            result = rand1 + rand2;
+        }
+        if (operation == "-") {
+            if (decision == "yes") {
+                result = rand1 - rand2;
+            }
+            else {
+                result = rand2 - rand1;
+            }
+
+        }
+        if (operation == "*") {
+            if (decision == "yes") {
+                result = rand1 * rand2;
+            }
+        }
+        if (operation == "/") {
+            if (decision == "yes") {
+                result = rand1 / rand2;
+            }
+            if (decision == "no") {
+                result = rand2 / rand1;
+            }
+        }
+    }
 }
+
+
 
